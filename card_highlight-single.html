@@ -4,10 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- CSP Framing -->
-  <meta http-equiv="Content-Security-Policy" content="frame-ancestors 'self' https://drive.google.com">
 
-  <title>Home</title>
+  <title>Cards: Spawn &amp; Highlight</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -39,7 +37,7 @@
 
   <!-- ======= Navbar ======= -->
   <div class="collapse navbar-collapse custom-navmenu" id="main-navbar">
-    <div class="container py-2 py-md-3">
+    <div class="container py-2 py-md-5">
       <div class="row align-items-start">
         <div class="col-md-2">
           <ul class="custom-menu">
@@ -71,80 +69,45 @@
 
   <main id="main">
 
-    <!-- ======= Works Section ======= -->
-    <section class="section site-portfolio">
-      <div class="container">
-        <div class="row mb-5 align-items-center">
-          <div class="col-md-12 col-lg-6 mb-4 mb-lg-0" data-aos="fade-up">
-            <h2>Hey, I'm Nano_Void</h2>
-            <p class="mb-0">Barely capable. Confused. Just having fun.</p><p class="mb-0">Click a Project for the full page (or a video if it doesn't have a page)</p>
-          </div>
-          <div class="col-md-12 col-lg-6 text-start text-lg-end" data-aos="fade-up" data-aos-delay="100">
+    <section class="section">
+      <div class="site-section pb-0">
+        <div class="container">
+          <div class="row align-items-stretch">
+            <div class="col-md-8" data-aos="fade-up">
+              <!-- Image here -->
+              <iframe src="https://drive.google.com/file/d/1lt5_5Ve1EJPJTUkZ_ws0AwrY6vVw-P47/preview" width="768" height="432" allow="autoplay"></iframe>
+              <!-- Image here -->
+              <!-- Image here -->
+              <iframe src="https://drive.google.com/file/d/1SWeZgFA8-vW0YfGsZTQHn7na7hNPAYtH/preview" width="768" height="432" allow="autoplay" style="margin-top: 20px;"></iframe>
+              <!-- Image here -->
+            </div>
+            <div class="col-md-3 ml-auto" data-aos="fade-up" data-aos-delay="100">
+              <div class="sticky-content">
+                <h3 class="h3">CARDS: SPAWN &amp; HIGHLIGHT (v2)</h3>
+                <p class="mb-4"><span class="text-muted">Dictionaried Instancing, Animation(Godot 4)</span></p>
+
+                <div class="mb-5">
+                  <p>Resolved bug forcing selection of all cards mouse enters</p>
+
+                </div>
+                </div>
+                <h4 class="h4 mb-3">Contains</h4>
+                <ul class="list-unstyled list-line mb-5">
+                  <li>Node Instancing into Dictionary</li>
+                  <li>Spawn Rotation Offset Styling</li>
+                  <li>Ability to Highlight Card with Mouse</li>
+                  <li>Improvement over v1 (below)</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
-        <div id="portfolio-grid" class="row no-gutter" data-aos="fade-up" data-aos-delay="200">
-          <div class="item web col-sm-6 col-md-4 col-lg-4 mb-4">
-            <a href="bouncing_ball-single.html" class="item-wrap fancybox">
-              <div class="work-info">
-                <h3>Bouncing Ball</h3>
-                <span>RigidBody2D. Aim to Mouse &amp; Stop</span>
-              </div>
-              <img class="img-fluid" src="assets/img/bouncing_ball.png">
-            </a>
-          </div>
-          <div class="item photography col-sm-6 col-md-4 col-lg-4 mb-4">
-            <a href="book_pages-single.html" class="item-wrap fancybox">
-              <div class="work-info">
-                <h3>Book Pages</h3>
-                <span>Interactable Pages &amp; Text from txt file</span>
-              </div>
-              <img class="img-fluid" src="assets/img/book_page.png">
-            </a>
-          </div>
-          <div class="item branding col-sm-6 col-md-4 col-lg-4 mb-4">
-            <!-- TO REPLACE --><a href="card_highlight-single.html" class="item-wrap fancybox">
-              <div class="work-info">
-                <h3>Card in Hand</h3>
-                <span>Add Card to Hand. Cards Rotate with Hand Size &amp; Highlight Card on Hover   </span>
-              </div>
-              <img class="img-fluid" src="assets/img/card_highlight_v2.png">
-            </a>
-          </div>
-          <div class="item design col-sm-6 col-md-4 col-lg-4 mb-4">
-            <!-- TO REPLACE --><a href="#" class="item-wrap fancybox">
-              <div class="work-info">
-                <h3>Flip Card</h3>
-                <span>Animation Player. Flips Card with scale.x</span>
-              </div>
-              <img class="img-fluid" src="assets/img/card_flip.png">
-            </a>
-          </div>
-          <div class="item photography col-sm-6 col-md-4 col-lg-4 mb-4">
-            <!-- TO REPLACE --><a href="#" class="item-wrap fancybox">
-              <div class="work-info">
-                <h3>XP, Level &amp; XP Bar</h3>
-                <span>Using Quadratic Progression for XP</span>
-              </div>
-              <img class="img-fluid" src="assets/img/xp_levelling.png">
-            </a>
-          </div>
-          <div class="item branding col-sm-6 col-md-4 col-lg-4 mb-4">
-            <!-- TO REPLACE --><a href="#" class="item-wrap fancybox">
-              <div class="work-info">
-                <h3>...</h3>
-                <span>...</span>
-              </div>
-              <img class="img-fluid" src="assets/img/">
-            </a>
-          </div>
-        </div>
-      </div>
-    </section><!-- End  Works Section -->
+    </section>
 
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  <footer class="footer">
+  <footer class="footer" role="contentinfo">
     <div class="container">
       <div class="row">
         <div class="col-sm-6">
