@@ -74,12 +74,35 @@
         <div class="container">
           <div class="row align-items-stretch">
             <div class="col-md-8" data-aos="fade-up">
-              <!-- Image here -->
-              <iframe src="https://drive.google.com/file/d/1lt5_5Ve1EJPJTUkZ_ws0AwrY6vVw-P47/preview" width="768" height="432" allow="autoplay"></iframe>
-              <!-- Image here -->
-              <!-- Image here -->
-              <iframe src="https://drive.google.com/file/d/1SWeZgFA8-vW0YfGsZTQHn7na7hNPAYtH/preview" width="768" height="432" allow="autoplay" style="margin-top: 20px;"></iframe>
-              <!-- Image here -->
+              <div id="video-container-1" class="video-container">
+                <a href="https://drive.google.com/file/d/1lt5_5Ve1EJPJTUkZ_ws0AwrY6vVw-P47/preview" target="_blank">View video 1 on Google Drive</a>
+              </div>
+              
+              <div id="video-container-2" class="video-container">
+                <a href="https://drive.google.com/file/d/1SWeZgFA8-vW0YfGsZTQHn7na7hNPAYtH/preview" target="_blank">View video 2 on Google Drive</a>
+              </div>
+            
+              <script>
+                window.onload = function() {
+                  var videoSources = [
+                    {id: 'video-container-1', src: 'https://drive.google.com/file/d/1lt5_5Ve1EJPJTUkZ_ws0AwrY6vVw-P47/preview'},
+                    {id: 'video-container-2', src: 'https://drive.google.com/file/d/1SWeZgFA8-vW0YfGsZTQHn7na7hNPAYtH/preview'}
+                  ];
+            
+                  videoSources.forEach(function(video) {
+                    var container = document.getElementById(video.id);
+                    if (container) {
+                      container.innerHTML = ''; // Clear the container
+                      var iframe = document.createElement('iframe');
+                      iframe.src = video.src;
+                      iframe.width = '768';
+                      iframe.height = '432';
+                      iframe.allow = 'autoplay';
+                      container.appendChild(iframe);
+                    }
+                  });
+                };
+              </script>
             </div>
             <div class="col-md-3 ml-auto" data-aos="fade-up" data-aos-delay="100">
               <div class="sticky-content">

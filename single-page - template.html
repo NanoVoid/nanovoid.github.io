@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  <!-- Meta tags-->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -67,19 +68,50 @@
     </div>
   </nav>
 
+  <!-- ======= Main ======= -->
   <main id="main">
 
     <section class="section">
       <div class="site-section pb-0">
         <div class="container">
           <div class="row align-items-stretch">
+            <!-- Video showcase column -->
             <div class="col-md-8" data-aos="fade-up">
-              <!-- Image here -->
-              <img src="assets/img/bouncing_ball.png" alt="Image" class="img-fluid">
-              <!-- Image here -->
+            <!-- Video container -->
+              <div id="video-container-1" class="video-container">
+              <!-- Fallback link if video doesn't load -->
+                <a href="https://drive.google.com/file/d/1lt5_5Ve1EJPJTUkZ_ws0AwrY6vVw-P47/preview" target="_blank">View video 1 on Google Drive</a>
+              </div>
+
+              <!-- Script to load videos dynamically -->
+              <!-- This resolves CSP issue causing +1.5s load times -->
+              <script>
+                window.onload = function() {
+                  var videoSources = [
+                    // Add more video objects here as needed
+                    {id: 'video-container-1', src: 'https://drive.google.com/file/d/1lt5_5Ve1EJPJTUkZ_ws0AwrY6vVw-P47/preview'},
+                  ];
+                  
+                  // Loop through video sources and create iframes
+                  videoSources.forEach(function(video) {
+                    var container = document.getElementById(video.id);
+                    if (container) {
+                      container.innerHTML = ''; // Clear the container
+                      var iframe = document.createElement('iframe');
+                      iframe.src = video.src;
+                      iframe.width = '768';
+                      iframe.height = '432';
+                      iframe.allow = 'autoplay';
+                      container.appendChild(iframe);
+                    }
+                  });
+                };
+              </script>
             </div>
+            <!-- Project details column -->
             <div class="col-md-3 ml-auto" data-aos="fade-up" data-aos-delay="100">
               <div class="sticky-content">
+                <!-- TODO: Replace with actual project details -->
                 <h3 class="h3">PROJECT NAME</h3>
                 <p class="mb-4"><span class="text-muted">Project Type (Godot 4, HTML, etc)</span></p>
 
