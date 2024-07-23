@@ -2,13 +2,11 @@
 <html lang="en">
 
 <head>
+  <!-- Meta tags-->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- CSP Framing -->
-  <meta http-equiv="Content-Security-Policy" content="frame-ancestors 'self' https://drive.google.com">
-  <title>Bouncing Ball</title>
 
-    
+  <title>Bouncing Ball</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -45,7 +43,6 @@
         <div class="col-md-2">
           <ul class="custom-menu">
             <li class="active"><a href="index.html">HOME</a></li>
-            <!-- <li><a href="works.html">PROJECTS</a></li> -->
           </ul>
         </div>
         <div class="col-md-4 d-none d-md-block  mr-auto">
@@ -76,11 +73,41 @@
       <div class="site-section pb-0">
         <div class="container">
           <div class="row align-items-stretch">
+            <!-- Video showcase column -->
             <div class="col-md-8" data-aos="fade-up">
-              <!-- Image or Video here -->
-              <iframe src="https://drive.google.com/file/d/1G_CZAEDUaqnFFMSdY_G1nSPqO65yjCrQ/preview" width="768" height="432" allow="autoplay"></iframe>
-              <!-- Image or Video here -->
+            <!-- Video container -->
+              <div id="video-container-1" class="video-container">
+              <!-- Fallback link if video doesn't load -->
+                <a href="https://drive.google.com/file/d/1G_CZAEDUaqnFFMSdY_G1nSPqO65yjCrQ/preview" target="_blank">View video 1 on Google Drive</a>
+              </div>
+
+              <!-- Script to load videos dynamically -->
+              <!-- This resolves CSP issue causing +1.5s load times -->
+              <script>
+                window.onload = function() {
+                  var videoSources = [
+                    // Add more video objects here as needed
+                    {id: 'video-container-1', src: 'https://drive.google.com/file/d/1G_CZAEDUaqnFFMSdY_G1nSPqO65yjCrQ/preview'},
+                  ];
+                  
+                  // Loop through video sources and create iframes
+                  videoSources.forEach(function(video) {
+                    var container = document.getElementById(video.id);
+                    if (container) {
+                      container.innerHTML = ''; // Clear the container
+                      var iframe = document.createElement('iframe');
+                      iframe.src = video.src;
+                      iframe.width = '768';
+                      iframe.height = '432';
+                      iframe.allow = 'autoplay';
+                      container.appendChild(iframe);
+                    }
+                  });
+                };
+              </script>
             </div>
+
+            <!-- Project details column -->
             <div class="col-md-3 ml-auto" data-aos="fade-up" data-aos-delay="100">
               <div class="sticky-content">
                 <h3 class="h3">Bouncing Ball</h3>
